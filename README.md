@@ -5,6 +5,8 @@
 # Author
 Betty kariuki
 
+## Live Link 
+https://igalore.herokuapp.com/
 
 ## Installation Requirements
 - Create Directory on your computer to store the application.

@@ -9,7 +9,7 @@
                 {% for image in images %}
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         
-                    <img src="{{image.image_path.url}}" id="pic" class="img-responsive" alt="Image">
+                    <a data-fancybox="images"href="{{image.image_path.url}}"><img src="{{image.image_path.url}}" id="pic" class="img-responsive" alt="Image"></a>
         
                 </div>
                 {% endfor %}

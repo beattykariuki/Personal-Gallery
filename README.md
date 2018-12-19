@@ -41,10 +41,6 @@ The application user is able to:
 - Postgresql
 - Heroku(Deployment)
 
-## Django admin
-username:beatty
-password:wagithomo67/
-
 ## Known Bugs
 No known bugs so far
 

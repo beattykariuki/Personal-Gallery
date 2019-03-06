@@ -37,7 +37,7 @@ The application user is able to:
 - Python 3.6.6(Django Framework)
 - HTML5
 - CSS3
-- Bootstrap3
+- Bootstrap4
 - Postgresql
 - Heroku(Deployment)
 

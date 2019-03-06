@@ -10,6 +10,13 @@ class Location(models.Model):
 class Category(models.Model):
     category_name = models.CharField(max_length =40)
 
+    def save_category(self):
+        self.save()
+
+    def delete_category(self):
+        # category= Category.objects.get(category_name='nature')
+        self.delete()
+
     def __str__(self):
         return self.category_name
 

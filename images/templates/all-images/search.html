@@ -1,0 +1,26 @@
+{%extends 'all-images/base.html'%}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% if images %}
+          <h2>Found {{ images|length  }} of searched term {{message}}</h2>
+        {% else %}
+           
+          <h2> Found 0 images for the search term {{meassage}}</h2>
+        {% endif %}
+    </div>
+  <div class="container">
+    <!-- Looping through images -->
+    <div class="row">
+      {% for image in images %}
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+  
+        <a href="{{image.image_path.url}}" data-fancybox="images">
+          <img src="{{image.image_path.url}}" id="pic" class="img-responsive" alt="Image">
+        </a>
+  
+      </div>
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}

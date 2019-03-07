@@ -22,7 +22,7 @@ class Category(models.Model):
 
 class Image(models.Model):
     title = models.CharField(max_length =40)
-    description = models.CharField(max_length =40)
+    image_description = models.TextField(max_length =350)
     location = models.ForeignKey(Location)
     category = models.ForeignKey(Category)
     image_path = models.ImageField(upload_to = 'images/')

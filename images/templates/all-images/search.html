@@ -12,15 +12,24 @@
   <div class="container">
     <!-- Looping through images -->
     <div class="row">
-      {% for image in images %}
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div class="masonry">
+        {% for image in images %}
+        <div class="item">
+          <!-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> -->
+          <!-- <h4 class="modal-title">{{ image.location }}</h4> -->
+          <a data-fancybox="images" href="{{image.image_path.url}}" data-caption="{{ image.image_description }} &nbsp; <br>
+                          {{ image.location }} &nbsp; <br>
+                          {{image.image_path.url}}">
+            <img src="{{image.image_path.url}}" id="pic" class="img-responsive" alt="Image">
+          </a>
+          <!-- <h4 class="modal-title">{{ image.image_description }}</h4> -->
   
-        <a href="{{image.image_path.url}}" data-fancybox="images">
-          <img src="{{image.image_path.url}}" id="pic" class="img-responsive" alt="Image">
-        </a>
   
+          <!-- </div> -->
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
-</div>
+  
+  </div>
 {% endblock %}
